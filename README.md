@@ -125,3 +125,18 @@ Capitulo 8 fech
 * dos cosas a discutir 1: los fechts crean un cuello de botella  2: los datos no cambian en tiempo real
 
 * In JavaScript, you can use the Promise.all() or Promise.allSettled() functions to initiate all promises at the same time. For example, in data.ts, we're using Promise.all() in the fetchCardData()
+
+
+Chapter 8 Static and Dynamic Rendering
+
+*The data requests are creating an unintentional waterfall.
+
+*The dashboard is static, so any data updates will not be reflected on your application.
+
+* el dashboard que estamos haciendo es dinamico
+
+* aca reside el problema de la cascada de peticiones
+
+* simularemos un slow data fecht para el ejemplo
+
+* desomentamos app/lib/data.ts console.log and setTimeout inside fetchRevenue()
