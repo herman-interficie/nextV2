@@ -165,3 +165,4 @@ At the component level, with <Suspense> for more granular control.
 
 *The user doesn't have to wait for the page to finish loading before navigating away (this is called interruptable navigation).
 
+* mejoraremos el componente
