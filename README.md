@@ -52,3 +52,5 @@ Capitulo4 Layouts
 * Creamos /app/dashboard/page.tsx Esto generara una viw para el /dashboard 
 
 * ahora esta pagina existe en http://localhost:3000/dashboard
+
+* Creamos app/dashboard/customers/page.tsx y app/dashboard/invoices/page.tsx
