@@ -118,3 +118,6 @@ Capitulo 8 fech
 
 * There are also 3 components which receive data: <Card>, <RevenueChart>, and <LatestInvoices>. They are currently commented out and not yet implemented.
 
+* descomentamos un codigo que activa un fech
+
+* descomentamos el resto del codigo para los demas fechts
