@@ -142,3 +142,14 @@ Chapter 8 Static and Dynamic Rendering
 * desomentamos app/lib/data.ts console.log and setTimeout inside fetchRevenue()
 
 * With dynamic rendering, your application is only as fast as your slowest data fetch.
+
+Capitulo 9 Streming
+
+* Streaming is a data transfer technique that allows you to break down a route into smaller "chunks" and progressively stream them from the server to the client as they become ready.
+
+* Streaming works well with React's component model, as each component can be considered a chunk.
+
+There are two ways you implement streaming in Next.js:
+
+At the page level, with the loading.tsx file (which creates <Suspense> for you).
+At the component level, with <Suspense> for more granular control.
