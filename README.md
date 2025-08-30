@@ -71,3 +71,7 @@ Capitulo4 Layouts
 * en el capitulo 3 agregamos un font a un layout. Este en especifico es especial y todo proyecto de next es requerido
 Se llama RootLayout y en este se agregan los metadatos y los tags
 
+Capitulo 5 Links
+
+* En next el componente <Link />  permite hacer navegacion desde el cliente
+*Para usarlo hay que importarlo y reemplazar los <a> por <Links>
