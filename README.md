@@ -121,3 +121,7 @@ Capitulo 8 fech
 * descomentamos un codigo que activa un fech
 
 * descomentamos el resto del codigo para los demas fechts
+
+* dos cosas a discutir 1: los fechts crean un cuello de botella  2: los datos no cambian en tiempo real
+
+* In JavaScript, you can use the Promise.all() or Promise.allSettled() functions to initiate all promises at the same time. For example, in data.ts, we're using Promise.all() in the fetchCardData()
