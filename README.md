@@ -176,3 +176,5 @@ At the component level, with <Suspense> for more granular control.
 * Pasaremos la llamada dentro del componente y aplicaremos el suspense
 
 * ahora lo aplicamos para lates invoice
+
+* Por ultimo agrupamos las cards
