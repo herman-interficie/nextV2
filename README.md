@@ -13,3 +13,17 @@ Capitulo 2
 * Se creo un modulo nuevo en css /app/ui/home.module.css y se importo en /app/page.tsx
 * este estilo remplaza el triangulo de taildwind
 * En este ejemplo se usa una libreria clsx que sirve para dar clases dinamicas a los componentes EJEMPLO: "app/ui/invoices/status.tsx 10"
+
+Capitulo 3 Fonts/Imagenes
+
+*Agregamos una font al proyecto
+* creamos app/ui/fonts.ts 
+* importamos Inter y declaramos el sub set latin
+
+'''
+import { Inter } from 'next/font/google';
+ 
+export const inter = Inter({ subsets: ['latin'] });
+'''
+
+* Lo agregamos al <body> element in /app/layout.tsx
