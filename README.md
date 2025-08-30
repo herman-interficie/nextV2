@@ -27,3 +27,5 @@ export const inter = Inter({ subsets: ['latin'] });
 '''
 
 * Lo agregamos al <body> element in /app/layout.tsx
+
+* Agregamos un segundo font Lusitana y lo añadimos a app/page.tsx
