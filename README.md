@@ -4,6 +4,12 @@ This is the starter template for the Next.js App Router Course. It contains the 
 
 For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
 
+Notas:
+Archivos especiales
+page.tsx: tiene el contenido de una ruta
+layout.tsx: Contiene elementos que seran compartidos por multiples paginas
+
+
 
 Capitulo 2
 
@@ -54,3 +60,14 @@ Capitulo4 Layouts
 * ahora esta pagina existe en http://localhost:3000/dashboard
 
 * Creamos app/dashboard/customers/page.tsx y app/dashboard/invoices/page.tsx
+
+*Ahora creamos un Layout
+
+* Creamos el archivo app/dashboard/layout.tsx
+
+* este archivo afectara a todos los pages debajo y a su nivel
+* los componentes pages se renderizaran donde de pasa en atributo childern
+
+* en el capitulo 3 agregamos un font a un layout. Este en especifico es especial y todo proyecto de next es requerido
+Se llama RootLayout y en este se agregan los metadatos y los tags
+
