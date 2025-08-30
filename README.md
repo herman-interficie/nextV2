@@ -153,3 +153,4 @@ There are two ways you implement streaming in Next.js:
 
 At the page level, with the loading.tsx file (which creates <Suspense> for you).
 At the component level, with <Suspense> for more granular control.
+
