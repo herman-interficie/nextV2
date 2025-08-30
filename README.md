@@ -8,6 +8,7 @@ Notas:
 Archivos especiales
 page.tsx: tiene el contenido de una ruta
 layout.tsx: Contiene elementos que seran compartidos por multiples paginas
+loading.tsx: is a special Next.js file built on top of React Suspense. It allows you to create fallback UI to show as a replacement while page content loads.
 
 
 
@@ -153,4 +154,14 @@ There are two ways you implement streaming in Next.js:
 
 At the page level, with the loading.tsx file (which creates <Suspense> for you).
 At the component level, with <Suspense> for more granular control.
+
+* Streaming a whole page with loading.tsx
+
+* In the /app/dashboard folder, create a new file called loading.tsx
+
+*loading.tsx is a special Next.js file built on top of React Suspense. It allows you to create fallback UI to show as a replacement while page content loads.
+
+*Since <SideNav> is static, it's shown immediately. The user can interact with <SideNav> while the dynamic content is loading.
+
+*The user doesn't have to wait for the page to finish loading before navigating away (this is called interruptable navigation).
 
