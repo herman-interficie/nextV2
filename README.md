@@ -75,3 +75,11 @@ Capitulo 5 Links
 
 * En next el componente <Link />  permite hacer navegacion desde el cliente
 *Para usarlo hay que importarlo y reemplazar los <a> por <Links>
+
+*Ahora agregaremos la funcionalidad de ver en que pagina estamos usando el hook de react usePathname();
+
+* Lo agregamos a app/ui/dashboard/nav-links.tsx
+
+* como es un hoock de react hay que decirle que el componente renderiza en el cliente con 'use client';
+
+* Agregamos el hoock y lo usamos junto a la libreria  clsx para asignar una clase dinamica a los elementos del sidebar
