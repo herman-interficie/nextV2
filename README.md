@@ -41,3 +41,14 @@ export const inter = Inter({ subsets: ['latin'] });
 * En el alto y ancho damos las dimenciones originales de la imagen para que obtenga bien el A/R
 
 * Usamos el atributo hidden para poder ocultar las imagenes en un landscape especifico
+
+
+Capitulo4 Layouts
+
+* Next enruta por carpetas "app/dashboard/inovices/" es una ruta y carpeta
+
+* Para cada ruta puedes crear una ionterfaz usando los archivos genericos layout.tsx y page.tsx
+
+* Creamos /app/dashboard/page.tsx Esto generara una viw para el /dashboard 
+
+* ahora esta pagina existe en http://localhost:3000/dashboard
