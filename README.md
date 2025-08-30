@@ -178,3 +178,11 @@ At the component level, with <Suspense> for more granular control.
 * ahora lo aplicamos para lates invoice
 
 * Por ultimo agrupamos las cards
+
+Capitulo 10 Pre rendering
+
+*So far, you've learned about static and dynamic rendering, and how to stream dynamic content that depends on data. In this chapter, let's learn how to combine static rendering, dynamic rendering, and streaming in the same route with Partial Prerendering (PPR).
+
+*Partial Prerendering is an experimental feature introduced in Next.js 14. The content of this page may be updated as the feature progresses in stability. PPR is only available with the Next.js canary releases (next@canary), not in the stable version of Next.js. We do not yet recommend using Partial Prerendering in production.
+
+* pnpm install next@canary
