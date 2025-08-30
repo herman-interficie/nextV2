@@ -168,3 +168,9 @@ At the component level, with <Suspense> for more granular control.
 * mejoraremos el componente
 
 *cambiamos la estructura de carpetas para que el loading solo afecte a la pdina del dashboard
+
+* ahora solo con un componente
+
+* Para esto usaremos React suspense
+
+* Pasaremos la llamada dentro del componente y aplicaremos el suspense
