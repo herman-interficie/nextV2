@@ -113,3 +113,8 @@ Capitulo 8 fech
 * para escribir sql estamos usando la libreria postgres.js
 
 * actualizamos el codigo de app/dashboard/page.tsx
+
+* este es un componente de servidor asincrono, los que nos permite usar await
+
+* There are also 3 components which receive data: <Card>, <RevenueChart>, and <LatestInvoices>. They are currently commented out and not yet implemented.
+
