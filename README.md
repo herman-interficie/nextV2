@@ -140,3 +140,5 @@ Chapter 8 Static and Dynamic Rendering
 * simularemos un slow data fecht para el ejemplo
 
 * desomentamos app/lib/data.ts console.log and setTimeout inside fetchRevenue()
+
+* With dynamic rendering, your application is only as fast as your slowest data fetch.
