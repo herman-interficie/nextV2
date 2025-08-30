@@ -103,3 +103,13 @@ Capitulo6 Base de datos
 * Para esto en el archivo app/seed/route.ts tenemos preparado un endpoint que se encarga de conectarse a la base de datos
 
 * Ahora vamos a app/query/route.ts y descomentamos 
+
+Capitulo 8 fech
+
+* al momento de hacer una app normalmente se tiene que comunicar con servicios externos.
+
+*  los componentes de servidor pueden usar async await y una libreria de fecht de react
+
+* para escribir sql estamos usando la libreria postgres.js
+
+* actualizamos el codigo de app/dashboard/page.tsx
