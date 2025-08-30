@@ -83,3 +83,23 @@ Capitulo 5 Links
 * como es un hoock de react hay que decirle que el componente renderiza en el cliente con 'use client';
 
 * Agregamos el hoock y lo usamos junto a la libreria  clsx para asignar una clase dinamica a los elementos del sidebar
+
+Capitulo6 Base de datos
+
+* Nos creamos una cuenta en Vercel https://vercel.com/
+
+* Registramos nuestro repo 
+
+* Desplegamos
+
+* Desde el dashborad elegimos Storage
+
+* Creamos una base de datos SQL con neon
+
+* agregamos los secretos al env
+
+* ahora vamos a  localhost:3000/seed
+
+* Para esto en el archivo app/seed/route.ts tenemos preparado un endpoint que se encarga de conectarse a la base de datos
+
+* Ahora vamos a app/query/route.ts y descomentamos 
