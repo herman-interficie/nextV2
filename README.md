@@ -174,3 +174,5 @@ At the component level, with <Suspense> for more granular control.
 * Para esto usaremos React suspense
 
 * Pasaremos la llamada dentro del componente y aplicaremos el suspense
+
+* ahora lo aplicamos para lates invoice
