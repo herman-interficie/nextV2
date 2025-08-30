@@ -12,3 +12,4 @@ Capitulo 2
 * Se agrerga el triangulo negro en el hero con tailwind 
 * Se creo un modulo nuevo en css /app/ui/home.module.css y se importo en /app/page.tsx
 * este estilo remplaza el triangulo de taildwind
+* En este ejemplo se usa una libreria clsx que sirve para dar clases dinamicas a los componentes EJEMPLO: "app/ui/invoices/status.tsx 10"
