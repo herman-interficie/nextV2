@@ -463,4 +463,60 @@ You've fetched data on the server.
 You're using the useRouter router hook for smoother, client-side transitions.
 These patterns are different from what you may be used to when working with client-side React, but hopefully, you now better understand the benefits of using URL search params and lifting this state to the serve
 
+Capitulo 12
+
+In the previous chapter, you implemented search and pagination using URL Search Params and Next.js APIs. Let's continue working on the Invoices page by adding the ability to create, update, and delete invoices!
+
+What React Server Actions are and how to use them to mutate data.
+
+How to work with forms and Server Components.
+
+Best practices for working with the native FormData object, including type validation.
+
+How to revalidate the client cache using the revalidatePath API.
+
+How to create dynamic route segments with specific IDs.
+
+What are Server Actions?
+React Server Actions allow you to run asynchronous code directly on the server. They eliminate the need to create API endpoints to mutate your data. Instead, you write asynchronous functions that execute on the server and can be invoked from your Client or Server Components.
+
+Security is a top priority for web applications, as they can be vulnerable to various threats. This is where Server Actions come in. They include features like encrypted closures, strict input checks, error message hashing, host restrictions, and more — all working together to significantly enhance your application security.
+
+Here are the steps you'll take to create a new invoice:
+
+Create a form to capture the user's input.
+Create a Server Action and invoke it from the form.
+Inside your Server Action, extract the data from the formData object.
+Validate and prepare the data to be inserted into your database.
+Insert the data and handle any errors.
+Revalidate the cache and redirect the user back to invoices page.
+
+* creamos el archivo dashboard/invoices/create/page.tsx
+
+Your page is a Server Component that fetches customers and passes it to the <Form> component. To save time, we've already created the <Form> component for you.
+
+Navigate to the <Form> component, and you'll see that the form:
+
+Has one <select> (dropdown) element with a list of customers.
+Has one <input> element for the amount with type="number".
+Has two <input> elements for the status with type="radio".
+Has one button with type="submit".
+
+ahora creamos una nueba accion en app/lib/actions.ts
+
+Good to know: In HTML, you'd pass a URL to the action attribute. This URL would be the destination where your form data should be submitted (usually an API endpoint).
+
+However, in React, the action attribute is considered a special prop - meaning React builds on top of it to allow actions to be invoked.
+
+Behind the scenes, Server Actions create a POST API endpoint. This is why you don't need to create API endpoints manually when using Server Actions.
+
+Tip: If you're working with forms that have many fields, you may want to consider using the entries() method with JavaScript's Object.fromEntries().
+
+You'll notice that amount is of type string and not number. This is because input elements with type="number" actually return a string, not a number!
+
+To handle type validation, you have a few options. While you can manually validate types, using a type validation library can save you time and effort. For your example, we'll use Zod, a TypeScript-first validation library that can simplify this task for you.
+
+In your actions.ts file, import Zod and define a schema that matches the shape of your form object. This schema will validate the formData before saving it to a database.
+
+
 
