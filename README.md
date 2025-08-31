@@ -518,5 +518,6 @@ To handle type validation, you have a few options. While you can manually valida
 
 In your actions.ts file, import Zod and define a schema that matches the shape of your form object. This schema will validate the formData before saving it to a database.
 
+cambiamos el dineroa  centimos para evitar decimales
 
 
