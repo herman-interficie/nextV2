@@ -614,3 +614,20 @@ In the code above, you're also adding the following aria labels:
 aria-describedby="customer-error": This establishes a relationship between the select element and the error message container. It indicates that the container with id="customer-error" describes the select element. Screen readers will read this description when the user interacts with the select box to notify them of errors.
 id="customer-error": This id attribute uniquely identifies the HTML element that holds the error message for the select input. This is necessary for aria-describedby to establish the relationship.
 aria-live="polite": The screen reader should politely notify the user when the error inside the div is updated. When the content changes (e.g. when a user corrects an error), the screen reader will announce these changes, but only when the user is idle so as not to interrupt them.
+
+
+Capitulo 15
+
+AUTH
+
+usaremos pnpm i next-auth@beta
+
+Next, generate a secret key for your application. This key is used to encrypt cookies, ensuring the security of user sessions. You can do this by running the following command in your terminal:
+
+Then, in your .env file, add your generated key to the AUTH_SECRET variable:
+
+Create an auth.config.ts file at the root of our project that exports an authConfig object. This object will contain the configuration options for NextAuth.js. For now, it will only contain the pages option:
+
+
+Protecting your routes with Next.js Middleware
+Next, add the logic to protect your routes. This will prevent users from accessing the dashboard pages unless they are logged in.
