@@ -565,3 +565,7 @@ Lastly, you want to pass the id to the Server Action so you can update the right
 Lastly, you want to pass the id to the Server Action so you can update the right record in your database. You cannot pass the id as an argument like so:
 
 Instead, you can pass id to the Server Action using JS bind. This will ensure that any values passed to the Server Action are encoded.
+
+ahora eliminamos
+
+Since this action is being called in the /dashboard/invoices path, you don't need to call redirect. Calling revalidatePath will trigger a new server request and re-render the table.
