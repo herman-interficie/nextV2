@@ -527,3 +527,41 @@ Next.js has a client-side router cache that stores the route segments in the use
 Since you're updating the data displayed in the invoices route, you want to clear this cache and trigger a new request to the server. You can do this with the revalidatePath function from Next.js:
 
 Once the database has been updated, the /dashboard/invoices path will be revalidated, and fresh data will be fetched from the server.
+
+
+Updating an invoice
+The updating invoice form is similar to the create an invoice form, except you'll need to pass the invoice id to update the record in your database. Let's see how you can get and pass the invoice id.
+
+These are the steps you'll take to update an invoice:
+
+Create a new dynamic route segment with the invoice id.
+Read the invoice id from the page params.
+Fetch the specific invoice from your database.
+Pre-populate the form with the invoice data.
+Update the invoice data in your database.
+
+1. Create a Dynamic Route Segment with the invoice id
+Next.js allows you to create Dynamic Route Segments when you don't know the exact segment name and want to create routes based on data. This could be blog post titles, product pages, etc. You can create dynamic route segments by wrapping a folder's name in square brackets. For example, [id], [post] or [slug].
+
+2 Back on your <Page> component, paste the following code:
+
+Notice how it's similar to your /create invoice page, except it imports a different form (from the edit-form.tsx file). This form should be pre-populated with a defaultValue for the customer's name, invoice amount, and status. To pre-populate the form fields, you need to fetch the specific invoice using id.
+
+In addition to searchParams, page components also accept a prop called params which you can use to access the id. Update your <Page> component to receive the prop:
+
+3. Fetch the specific invoice
+Then:
+
+Import a new function called fetchInvoiceById and pass the id as an argument.
+Import fetchCustomers to fetch the customer names for the dropdown.
+You can use Promise.all to fetch both the invoice and customers in parallel:
+
+Great! Now, test that everything is wired correctly. Visit http://localhost:3000/dashboard/invoices and click on the Pencil icon to edit an invoice. After navigation, you should see a form that is pre-populated with the invoice details:
+
+The URL should also be updated with an id as follows: http://localhost:3000/dashboard/invoice/uuid/edit
+
+Lastly, you want to pass the id to the Server Action so you can update the right record in your database. You cannot pass the id as an argument like so:
+
+Lastly, you want to pass the id to the Server Action so you can update the right record in your database. You cannot pass the id as an argument like so:
+
+Instead, you can pass id to the Server Action using JS bind. This will ensure that any values passed to the Server Action are encoded.
