@@ -520,4 +520,10 @@ In your actions.ts file, import Zod and define a schema that matches the shape o
 
 cambiamos el dineroa  centimos para evitar decimales
 
+ahora insertaremos en la base de datos
 
+Next.js has a client-side router cache that stores the route segments in the user's browser for a time. Along with prefetching, this cache ensures that users can quickly navigate between routes while reducing the number of requests made to the server.
+
+Since you're updating the data displayed in the invoices route, you want to clear this cache and trigger a new request to the server. You can do this with the revalidatePath function from Next.js:
+
+Once the database has been updated, the /dashboard/invoices path will be revalidated, and fresh data will be fetched from the server.
