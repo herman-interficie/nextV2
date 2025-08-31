@@ -565,3 +565,13 @@ Lastly, you want to pass the id to the Server Action so you can update the right
 Lastly, you want to pass the id to the Server Action so you can update the right record in your database. You cannot pass the id as an argument like so:
 
 Instead, you can pass id to the Server Action using JS bind. This will ensure that any values passed to the Server Action are encoded.
+
+Capitulo 13
+
+In the previous chapter, you learned how to mutate data using Server Actions. Let's see how you can handle errors gracefully using JavaScript's try/catch statements and Next.js APIs for uncaught exceptions.
+
+Note how redirect is being called outside of the try/catch block. This is because redirect works by throwing an error, which would be caught by the catch block. To avoid this, you can call redirect after try/catch. redirect would only be reachable if try is successful.
+
+We're gracefully handling these errors by catching the database issue, and returning a helpful message from our Server Action.
+
+What happens if there is an uncaught exception in your action? We can simulate this by manually throwing an error. For example, in the deleteInvoice action, throw an error at the top of the function:
