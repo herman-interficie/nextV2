@@ -590,3 +590,27 @@ How to use eslint-plugin-jsx-a11y with Next.js to implement accessibility best p
 How to implement server-side form validation.
 
 How to use the React useActionState hook to handle form errors, and display them to the user.
+
+There are three things we're already doing to improve accessibility in our forms:
+
+Semantic HTML: Using semantic elements (<input>, <option>, etc) instead of <div>. This allows assistive technologies (AT) to focus on the input elements and provide appropriate contextual information to the user, making the form easier to navigate and understand.
+Labelling: Including <label> and the htmlFor attribute ensures that each form field has a descriptive text label. This improves AT support by providing context and also enhances usability by allowing users to click on the label to focus on the corresponding input field.
+Focus Outline: The fields are properly styled to show an outline when they are in focus. This is critical for accessibility as it visually indicates the active element on the page, helping both keyboard and screen reader users to understand where they are on the form. You can verify this by pressing tab.
+These practices lay a good foundation for making your forms more accessible to many users. However, they don't address form validation and errors.
+
+There are a couple of ways you can validate forms on the client. The simplest would be to rely on the form validation provided by the browser by adding the required attribute to the <input> and <select> elements in your forms. For example:
+
+
+Server-Side validation
+By validating forms on the server, you can:
+
+Ensure your data is in the expected format before sending it to your database.
+Reduce the risk of malicious users bypassing client-side validation.
+Have one source of truth for what is considered valid data.
+In your create-form.tsx component, import the useActionState hook from react. Since useActionState is a hook, you will need to turn your form into a Client Component using "use client" directive:
+
+In the code above, you're also adding the following aria labels:
+
+aria-describedby="customer-error": This establishes a relationship between the select element and the error message container. It indicates that the container with id="customer-error" describes the select element. Screen readers will read this description when the user interacts with the select box to notify them of errors.
+id="customer-error": This id attribute uniquely identifies the HTML element that holds the error message for the select input. This is necessary for aria-describedby to establish the relationship.
+aria-live="polite": The screen reader should politely notify the user when the error inside the div is updated. When the content changes (e.g. when a user corrects an error), the screen reader will announce these changes, but only when the user is idle so as not to interrupt them.
