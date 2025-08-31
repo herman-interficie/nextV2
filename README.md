@@ -566,6 +566,10 @@ Lastly, you want to pass the id to the Server Action so you can update the right
 
 Instead, you can pass id to the Server Action using JS bind. This will ensure that any values passed to the Server Action are encoded.
 
+ahora eliminamos
+
+Since this action is being called in the /dashboard/invoices path, you don't need to call redirect. Calling revalidatePath will trigger a new server request and re-render the table.
+
 Capitulo 13
 
 In the previous chapter, you learned how to mutate data using Server Actions. Let's see how you can handle errors gracefully using JavaScript's try/catch statements and Next.js APIs for uncaught exceptions.
