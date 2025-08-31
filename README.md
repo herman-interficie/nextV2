@@ -455,3 +455,12 @@ Finally, it constructs the full URL using the pathname and updated search parame
 The rest of the <Pagination> component deals with styling and different states (first, last, active, disabled, etc). We won't go into detail for this course, but feel free to look through the code to see where createPageURL is being called.
 
 Finally, when the user types a new search query, you want to reset the page number to 1. You can do this by updating the handleSearch function in your <Search> component:
+
+To summarize, in this chapter:
+
+You've handled search and pagination with URL search parameters instead of client state.
+You've fetched data on the server.
+You're using the useRouter router hook for smoother, client-side transitions.
+These patterns are different from what you may be used to when working with client-side React, but hopefully, you now better understand the benefits of using URL search params and lifting this state to the serve
+
+
