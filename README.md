@@ -581,3 +581,12 @@ We're gracefully handling these errors by catching the database issue, and retur
 What happens if there is an uncaught exception in your action? We can simulate this by manually throwing an error. For example, in the deleteInvoice action, throw an error at the top of the function:
 
 Se agrego el caso de 404 con el archivo
+
+
+Capitulo 14
+
+How to use eslint-plugin-jsx-a11y with Next.js to implement accessibility best practices.
+
+How to implement server-side form validation.
+
+How to use the React useActionState hook to handle form errors, and display them to the user.
