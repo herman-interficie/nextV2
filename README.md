@@ -425,3 +425,13 @@ You might have noticed you used two different ways to extract search params. Whe
 <Search> is a Client Component, so you used the useSearchParams() hook to access the params from the client.
 <Table> is a Server Component that fetches its own data, so you can pass the searchParams prop from the page to the component.
 As a general rule, if you want to read the params from the client, use the useSearchParams() hook as this avoids having to go back to the server.
+
+Best practice: Debouncing
+
+Ahora que todo funciona optimizaremos un poco
+
+por cada stroke del teclado se hace una busqueda lo que estresa al navegador
+
+Debouncing is a programming practice that limits the rate at which a function can fire. In our case, you only want to query the database when the user has stopped typing.
+
+You can implement debouncing in a few ways, including manually creating your own debounce function. To keep things simple, we'll use a library called use-debounce
